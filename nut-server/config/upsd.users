@@ -1,3 +1,10 @@
-[monuser]
-  password = secretpass
-  upsmon master
+[admin]
+    password = ADMIN_PASSWORD_HERE
+    actions = set
+    actions = fsd
+    instcmds = all
+    upsmon primary
+
+[observer]
+    password = OBSERVER_PASSWORD_HERE
+    upsmon secondary
