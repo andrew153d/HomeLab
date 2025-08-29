@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    image: instantlinux/nut-upsd:latest
+    restart: always
+    environment:
+      - TZ=UTC
+    volumes:
+      - ./config:/etc/nut
+      - ./data:/var/lib/nut
+    ports:
+      - "3493:3493"
+    devices:
+      - "/dev/hidraw0:/dev/hidraw0"
+    privileged: true
