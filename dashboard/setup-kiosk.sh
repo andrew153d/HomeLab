@@ -46,4 +46,4 @@ sudo systemctl daemon-reexec
 sudo systemctl enable $SERVICE_NAME
 
 echo "Setup complete. Rebooting now..."
-#sudo reboot
+sudo reboot
