@@ -10,9 +10,12 @@ This guide explains how to set up a Chromium browser in kiosk mode using the pro
 
 ## 1. Clone Only the `dashboard` Directory
 
+
 ```bash
-git clone --depth 1 --filter=blob:none --sparse https://github.com/andrew153d/HomeLab.git
-cd HomeLab
+cd ~
+rm -rf ~/HomeLab  # Remove any existing HomeLab directory in your home folder first
+git clone --depth 1 --filter=blob:none --sparse https://github.com/andrew153d/HomeLab.git ~/HomeLab
+cd ~/HomeLab
 git sparse-checkout set dashboard
 cd dashboard
 ```
