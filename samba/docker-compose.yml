@@ -1,0 +1,13 @@
+services:
+  samba:
+    image: dperson/samba
+    container_name: samba
+    restart: unless-stopped
+    environment:
+      - TZ=EST
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - /media/ubuntu22/H:/mount/sharenado
+    command: ["-s", "sharenado;/mount/sharenado"]
