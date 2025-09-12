@@ -1,0 +1,15 @@
+*.env
+
+# Samba configuration files
+samba/config/users.conf
+samba/config/smb.conf
+
+# Portainer sensitive data
+portainer-server/data/portainer.key
+portainer-server/data/portainer.pub
+portainer-server/data/certs/
+portainer-server/data/tls/
+portainer-server/data/chisel/
+portainer-server/data/bin/
+portainer-server/data/docker_config/
+
