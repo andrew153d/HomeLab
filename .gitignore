@@ -13,3 +13,4 @@ portainer-server/data/chisel/
 portainer-server/data/bin/
 portainer-server/data/docker_config/
 
+portainer-server/data/portainer.db
