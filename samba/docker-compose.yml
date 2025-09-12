@@ -1,13 +1,26 @@
 services:
   samba:
-    image: dperson/samba
+    image: dockurr/samba
     container_name: samba
-    restart: unless-stopped
     environment:
-      - TZ=EST
+      NAME: "ShareNado"
+      USER: ${SAMBA_USER}
+      PASS: ${SAMBA_PASS}
     ports:
-      - "139:139"
-      - "445:445"
+      - 445:445
     volumes:
-      - /media/ubuntu22/H:/mount/sharenado
-    command: ["-s", "sharenado;/mount/sharenado"]
+      - ./config/smb.conf:/etc/samba/smb.conf
+      - ./config/users.conf:/etc/samba/users.conf
+      - /media/ubuntu22/H:/storage
+    restart: always
+
+  portainer_agent:
+      image: portainer/agent:2.33.1
+      container_name: portainer_agent
+      restart: always
+      ports:
+        - 9001:9001
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /var/lib/docker/volumes:/var/lib/docker/volumes
+        - /:/host
