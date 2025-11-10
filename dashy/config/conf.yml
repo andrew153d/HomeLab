@@ -56,17 +56,17 @@ sections:
     items:
       - title: Lenovo ProxMox
         icon: hl-proxmox
-        url: 'https://192.168.12.208:8006/#v1:0:=qemu%2F102:4:5::::::'
+        url: 'https://192.168.1.208:8006/#v1:0:=qemu%2F102:4:5::::::'
         target: newtab
         id: 0_664_lenovoproxmox
       - title: NAS ProxMox
         icon: hl-proxmox
-        url: 'https://192.168.12.189:8006/#v1:0:=node%2Fpve2:4:::::::'
+        url: 'https://192.168.1.189:8006/#v1:0:=node%2Fpve2:4:::::::'
         target: newtab
         id: 1_664_nasproxmox
       - title: Windows VM
         url: >-
-          https://192.168.12.189:8006/?console=kvm&novnc=1&vmid=100&vmname=Windows11&node=pve2&resize=off&cmd=
+          https://192.168.1.189:8006/?console=kvm&novnc=1&vmid=100&vmname=Windows11&node=pve2&resize=off&cmd=
         target: newtab
         id: 2_664_windowsvm
   - name: Storage
@@ -79,7 +79,7 @@ sections:
     items:
       - title: TrueNAS
         icon: hl-truenas
-        url: http://192.168.12.241/ui/sessions/signin
+        url: http://192.168.1.241/ui/sessions/signin
         target: newtab
         id: 0_725_truenas
   - name: Media
@@ -92,9 +92,24 @@ sections:
     items:
       - title: Jellyfin
         icon: hl-jellyfin
-        url: http://192.168.12.226:8096/web/index.html
+        url: http://192.168.1.226:8096/web/index.html
         target: newtab
         id: 0_480_jellyfin
+      - title: Sonarr
+        icon: hl-sonarr
+        url: http://192.168.1.193:8989/
+        target: newtab
+        id: 1_480_sonarr
+      - title: qBittorrent
+        icon: hl-qbittorrent
+        url: http://192.168.1.193:8080/
+        target: newtab
+        id: 2_480_qbittorrent
+      - title: Prowlarr
+        icon: hl-prowlarr
+        url: http://192.168.1.193:9696/login?returnUrl=%2F
+        target: newtab
+        id: 3_480_prowlarr
   - name: Automation
     displayData:
       sortBy: default
@@ -111,7 +126,7 @@ sections:
       - title: Open Web UI
         icon: >-
           https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.dNypRQLJ_J3ZRQ6euXuHDgHaHa%3Fpid%3DApi&f=1&ipt=ed2b1b9424279e3e4032059ebc5095e983ed578acd8812c5fb5a0b84d2821462&ipo=images
-        url: http://192.168.12.207:8080/
+        url: http://192.168.1.182:3000/
         target: newtab
         id: 1_1057_openwebui
   - name: Bookmarks
@@ -128,7 +143,7 @@ sections:
         target: newtab
         id: 0_937_selfhosted
       - title: TAR1090
-        url: http://192.168.12.137/tar1090/
+        url: http://192.168.1.137/tar1090/
         target: newtab
         id: 1_937_tar
       - title: Reflow Master Pro
@@ -140,6 +155,37 @@ sections:
           https://weather.cod.edu/satrad/?parms=subregional-Virginias-comp_radar-24-0-100-1&checked=map&colorbar=undefined
         target: newtab
         id: 3_937_radar
+      # Local-AI stack web UIs
+      - title: Open Web UI
+        icon: fas fa-robot
+        url: http://192.168.1.182:3000/
+        target: newtab
+        id: 4_937_openwebui
+      - title: Flowise
+        icon: fas fa-project-diagram
+        url: http://192.168.1.182:3001/
+        target: newtab
+        id: 5_937_flowise
+      - title: n8n
+        icon: fas fa-network-wired
+        url: http://192.168.1.182:5678/
+        target: newtab
+        id: 6_937_n8n
+      - title: Qdrant
+        icon: fas fa-database
+        url: http://192.168.1.182:6333/
+        target: newtab
+        id: 7_937_qdrant
+      - title: SearxNG
+        icon: fas fa-search
+        url: http://192.168.1.182:8081/
+        target: newtab
+        id: 8_937_searxng
+      - title: Portainer Agent
+        icon: fas fa-server
+        url: http://192.168.1.182:9001/
+        target: newtab
+        id: 9_937_portaineragent
   - name: HomeLab Reference
     displayData:
       sortBy: default
