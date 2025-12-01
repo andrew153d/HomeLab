@@ -1,0 +1,2 @@
+- Home asstant runs on its own proxmox vm
+- Started using https://community-scripts.github.io/ProxmoxVE/scripts?id=haos-vm
