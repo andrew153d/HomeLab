@@ -11,7 +11,7 @@ services:
     volumes:
       - ./config/smb.conf:/etc/samba/smb.conf
       - ./config/users.conf:/etc/samba/users.conf
-      - /media/ubuntu22/H:/storage
+      - /media/ubuntu22/H1:/storage
     restart: always
 
   portainer_agent:
