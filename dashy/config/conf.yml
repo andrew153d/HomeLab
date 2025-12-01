@@ -123,12 +123,54 @@ sections:
         url: http://homeassistant.local:8123/
         target: newtab
         id: 0_1057_homeassistant
+  - name: AI Services
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Ollama
+        icon: fas fa-llama
+        url: http://192.168.1.182:11434/
+        target: newtab
+        id: 0_1100_ollama
       - title: Open Web UI
-        icon: >-
-          https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.dNypRQLJ_J3ZRQ6euXuHDgHaHa%3Fpid%3DApi&f=1&ipt=ed2b1b9424279e3e4032059ebc5095e983ed578acd8812c5fb5a0b84d2821462&ipo=images
+        icon: fas fa-brain
         url: http://192.168.1.182:3000/
         target: newtab
-        id: 1_1057_openwebui
+        id: 1_1100_openwebui
+      - title: Flowise
+        icon: fas fa-project-diagram
+        url: http://192.168.1.182:3001/
+        target: newtab
+        id: 2_1100_flowise
+      - title: n8n
+        icon: hl-n8n
+        url: http://192.168.1.182:5678/
+        target: newtab
+        id: 3_1100_n8n
+      - title: Qdrant
+        icon: fas fa-vector-square
+        url: http://192.168.1.182:6333/
+        target: newtab
+        id: 4_1100_qdrant
+      - title: SearxNG
+        icon: fas fa-search-plus
+        url: http://192.168.1.182:8081/
+        target: newtab
+        id: 5_1100_searxng
+      - title: Portainer Agent
+        icon: hl-portainer
+        url: http://192.168.1.182:9001/
+        target: newtab
+        id: 6_1100_portaineragent
+      - title: PostgreSQL
+        icon: hl-postgresql
+        url: http://192.168.1.182:5432/
+        target: newtab
+        id: 7_1100_postgresql
   - name: Bookmarks
     displayData:
       sortBy: default
@@ -155,37 +197,19 @@ sections:
           https://weather.cod.edu/satrad/?parms=subregional-Virginias-comp_radar-24-0-100-1&checked=map&colorbar=undefined
         target: newtab
         id: 3_937_radar
-      # Local-AI stack web UIs
-      - title: Open Web UI
-        icon: fas fa-robot
-        url: http://192.168.1.182:3000/
+  - name: Application Generator
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Application Generator
+        icon: fas fa-cog
+        url: http://192.168.1.156:5000/
         target: newtab
-        id: 4_937_openwebui
-      - title: Flowise
-        icon: fas fa-project-diagram
-        url: http://192.168.1.182:3001/
-        target: newtab
-        id: 5_937_flowise
-      - title: n8n
-        icon: fas fa-network-wired
-        url: http://192.168.1.182:5678/
-        target: newtab
-        id: 6_937_n8n
-      - title: Qdrant
-        icon: fas fa-database
-        url: http://192.168.1.182:6333/
-        target: newtab
-        id: 7_937_qdrant
-      - title: SearxNG
-        icon: fas fa-search
-        url: http://192.168.1.182:8081/
-        target: newtab
-        id: 8_937_searxng
-      - title: Portainer Agent
-        icon: fas fa-server
-        url: http://192.168.1.182:9001/
-        target: newtab
-        id: 9_937_portaineragent
+        id: 0_2000_applicationgenerator
   - name: HomeLab Reference
     displayData:
       sortBy: default
