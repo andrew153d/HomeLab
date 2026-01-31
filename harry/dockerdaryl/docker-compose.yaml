@@ -1,0 +1,41 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+
+    # If you plan to use AdGuard Home's DHCP server, Docker recommends using host networking.
+    # Read: https://hub.docker.com/r/adguard/adguardhome ("DHCP Server")
+    # network_mode: host
+
+    volumes:
+      - ./data/work:/opt/adguardhome/work
+      - ./config/conf:/opt/adguardhome/conf
+
+    # When using `network_mode: host`, DO NOT publish ports.
+    ports:
+      # Plain DNS
+      - "53:53/tcp"
+      - "53:53/udp"
+
+      # DHCP (only if you intend to use AdGuard Home as a DHCP server)
+      # - "67:67/udp"
+      # - "68:68/udp"
+
+      # Web UI + HTTPS/DoH
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "443:443/udp"
+      - "3000:3000/tcp" # initial setup wizard
+
+      # DNS-over-TLS
+      # - "853:853/tcp"
+
+      # DNS-over-QUIC
+      # - "784:784/udp"
+      # - "853:853/udp"
+      # - "8853:8853/udp"
+
+      # DNSCrypt
+      # - "5443:5443/tcp"
+      # - "5443:5443/udp"
