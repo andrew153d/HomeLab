@@ -38,3 +38,10 @@ readlink -f /etc/resolv.conf
 ```
 
 - To roll back, set `DNSStubListener=yes` and restart `systemd-resolved`.
+
+## Dashy
+
+- **URL:** `http://192.168.1.185:4000`
+- **Data/config path:** `./dashy/config` (mounted to `/app/user-data` in the container)
+
+If you have another service already using port `4000`, change the host-side port mapping in `docker-compose.yaml`.

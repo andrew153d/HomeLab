@@ -23,7 +23,7 @@ services:
       # - "68:68/udp"
 
       # Web UI + HTTPS/DoH
-      - "80:80/tcp"
+      - "8081:80/tcp" # WebUI
       - "443:443/tcp"
       - "443:443/udp"
       - "3000:3000/tcp" # initial setup wizard

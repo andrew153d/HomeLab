@@ -1,0 +1,53 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+
+    depends_on:
+      - dashy
+
+    ports:
+      - "80:80/tcp"
+
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+
+  dashy:
+    image: lissy93/dashy:latest
+    container_name: dashy
+    restart: unless-stopped
+
+    volumes:
+      # Dashy config (create ./dashy/config/conf.yml or let Dashy create defaults)
+      - ./dashy/config:/app/user-data
+
+    ports:
+      - "4000:8080/tcp"
+
+    environment:
+      - NODE_ENV=production
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+
+    # Optional: wait until Docker is reachable (via socket)
+    depends_on:
+      - dashy
+
+    ports:
+      # Portainer UI (HTTP)
+      - "9000:9000/tcp"
+      # Portainer UI (HTTPS)
+      - "9443:9443/tcp"
+
+    volumes:
+      # Persist Portainer state
+      - ./portainer_data:/data
+      # Allow Portainer to manage local Docker
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  portainer_data:
