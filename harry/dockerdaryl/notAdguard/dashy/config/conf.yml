@@ -1,0 +1,264 @@
+pageInfo:
+  title: Dashy
+  description: Welcome to your new dashboard!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
+appConfig:
+  theme: nord-frost
+  layout: vertical
+  iconSize: medium
+sections:
+  - name: Getting Started
+    icon: fas fa-rocket
+    items:
+      - title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+        id: 0_1481_dashylive
+      - title: GitHub
+        description: Source Code, Issues and Pull Requests
+        url: https://github.com/lissy93/dashy
+        icon: favicon
+        id: 1_1481_github
+      - title: Docs
+        description: Configuring & Usage Documentation
+        provider: Dashy.to
+        icon: far fa-book
+        url: https://dashy.to/docs
+        id: 2_1481_docs
+      - title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+        id: 3_1481_showcase
+      - title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+        id: 4_1481_configguide
+      - title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+        id: 5_1481_support
+  - name: HomeLab
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: http://dashy.forge.com/
+        target: newtab
+        id: 0_664_dashy
+      - title: Portainer
+        icon: hl-portainer
+        url: http://portainer.forge.com/
+        target: newtab
+        id: 1_664_portainer
+      - title: Router
+        icon: fas fa-network-wired
+        url: http://router.forge.com/
+        target: newtab
+        id: 2_664_router
+      - title: AdGuard Home
+        icon: hl-adguardhome
+        url: http://adguard.forge.com/
+        target: newtab
+        id: 3_664_adguard
+      - title: ProxMox A
+        icon: hl-proxmox
+        url: http://proxA.forge.com/
+        target: newtab
+        id: 4_664_proxA
+      - title: Lenovo ProxMox
+        icon: hl-proxmox
+        url: 'https://192.168.1.208:8006/#v1:0:=qemu%2F102:4:5::::::'
+        target: newtab
+        id: 5_664_lenovoproxmox
+      - title: NAS ProxMox
+        icon: hl-proxmox
+        url: 'https://192.168.1.189:8006/#v1:0:=node%2Fpve2:4:::::::'
+        target: newtab
+        id: 6_664_nasproxmox
+      - title: Windows VM
+        url: >-
+          https://192.168.1.189:8006/?console=kvm&novnc=1&vmid=100&vmname=Windows11&node=pve2&resize=off&cmd=
+        target: newtab
+        id: 7_664_windowsvm
+  - name: Storage
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: TrueNAS
+        icon: hl-truenas
+        url: http://192.168.1.241/ui/sessions/signin
+        target: newtab
+        id: 0_725_truenas
+  - name: Media
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Jellyfin
+        icon: hl-jellyfin
+        url: http://192.168.1.226:8096/web/index.html
+        target: newtab
+        id: 0_480_jellyfin
+      - title: Sonarr
+        icon: hl-sonarr
+        url: http://sonarr.forge.com/
+        target: newtab
+        id: 1_480_sonarr
+      - title: qBittorrent
+        icon: hl-qbittorrent
+        url: http://qbittorrent.forge.com/
+        target: newtab
+        id: 2_480_qbittorrent
+      - title: Prowlarr
+        icon: hl-prowlarr
+        url: http://192.168.1.193:9696/login?returnUrl=%2F
+        target: newtab
+        id: 3_480_prowlarr
+      - title: Radarr
+        icon: hl-radarr
+        url: http://radarr.forge.com/
+        target: newtab
+        id: 4_480_radarr
+      - title: Jackett
+        icon: hl-jackett
+        url: http://jackett.forge.com/
+        target: newtab
+        id: 5_480_jackett
+      - title: NZBGet
+        icon: hl-nzbget
+        url: http://nzbget.forge.com/
+        target: newtab
+        id: 6_480_nzbget
+  - name: Automation
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Home Assistant
+        icon: hl-home-assistant
+        url: http://homeassistant.local:8123/
+        target: newtab
+        id: 0_1057_homeassistant
+  - name: AI Services
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Ollama
+        icon: fas fa-llama
+        url: http://192.168.1.182:11434/
+        target: newtab
+        id: 0_1100_ollama
+      - title: Open Web UI
+        icon: fas fa-brain
+        url: http://192.168.1.182:3000/
+        target: newtab
+        id: 1_1100_openwebui
+      - title: Flowise
+        icon: fas fa-project-diagram
+        url: http://192.168.1.182:3001/
+        target: newtab
+        id: 2_1100_flowise
+      - title: n8n
+        icon: hl-n8n
+        url: http://192.168.1.182:5678/
+        target: newtab
+        id: 3_1100_n8n
+      - title: Qdrant
+        icon: fas fa-vector-square
+        url: http://192.168.1.182:6333/
+        target: newtab
+        id: 4_1100_qdrant
+      - title: SearxNG
+        icon: fas fa-search-plus
+        url: http://192.168.1.182:8081/
+        target: newtab
+        id: 5_1100_searxng
+      - title: Portainer Agent
+        icon: hl-portainer
+        url: http://192.168.1.182:9001/
+        target: newtab
+        id: 6_1100_portaineragent
+      - title: PostgreSQL
+        icon: hl-postgresql
+        url: http://192.168.1.182:5432/
+        target: newtab
+        id: 7_1100_postgresql
+  - name: Bookmarks
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: SelfHosted
+        url: >-
+          https://github.com/awesome-selfhosted/awesome-selfhosted?tab=readme-ov-file
+        target: newtab
+        id: 0_937_selfhosted
+      - title: TAR1090
+        url: http://192.168.1.137/tar1090/
+        target: newtab
+        id: 1_937_tar
+      - title: Reflow Master Pro
+        url: http://rmp.local/
+        target: newtab
+        id: 2_937_reflowmasterpro
+      - title: Radar
+        url: >-
+          https://weather.cod.edu/satrad/?parms=subregional-Virginias-comp_radar-24-0-100-1&checked=map&colorbar=undefined
+        target: newtab
+        id: 3_937_radar
+  - name: Application Generator
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Application Generator
+        icon: fas fa-cog
+        url: http://192.168.1.156:5000/
+        target: newtab
+        id: 0_2000_applicationgenerator
+  - name: HomeLab Reference
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Windows11 on Proxmox
+        url: https://www.youtube.com/watch?v=Qnv85FSP5E8
+        target: newtab
+        id: 0_1607_windowsonproxmox
